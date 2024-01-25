@@ -12,12 +12,17 @@ import FontAwesome from "./FontAwesome.astro";
 import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
+import JamComments from '@jam-comments/astro';
+
+
+
 export interface Props {
   title: string;
   date: Date;
+  url: string;
 }
 
-const { title, date } = Astro.props;
+const { title, date, url } = Astro.props;
 const formattedDate = new Date(date).toLocaleDateString("en-us", {
   year: "numeric",
   month: "short",
@@ -57,6 +62,14 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         <slot name="content" />
       </section>
     </main>
+
+    <JamComments
+    path={url}
+    apiKey="161|R62nidcTqD5G8Fs5Hec75cbMTAbmvQn4BiW9RjwO991c3a43"
+    domain="nima337.vercel.app"
+    environment="production"
+    tz="America/Vancouver"
+    />
     <style>
       body {
         display: grid;
@@ -71,5 +84,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         grid-area: main;
       }
     </style>
+    
   </body>
 </html>
