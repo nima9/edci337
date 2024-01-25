@@ -60,13 +60,11 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         <slot name="content" />
       </section>
     </main>
-    <JamComments
-    path={url},
-    apiKey="163|tzwdJa6ZQt6E9DTIwNkh9APe9hlU1VGHiEmSkbgE18d74f82"
-    domain="nima337.vercel.app"
-    environment="production"
-    tz="America/Vancouver"
-    />
+    
+    <JamComments 
+    path={url}, 
+    tz="America/Vancouver"/>
+    
     <style>
       body {
         display: grid;

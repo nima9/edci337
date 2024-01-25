@@ -1,7 +1,9 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
+// import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import vercelServerless from "@astrojs/vercel/serverless";
+
 
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
@@ -30,12 +32,23 @@ if (isBuild) {
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: SERVER_PORT
+    port: SERVER_PORT,
   },
   site: BASE_URL,
-  integrations: [sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
+  integrations: [
+    // sitemap(), // for SEO sitemap, don't need rn.
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    markdoc(),
+  ],
+  output: 'server',
+  adapter: vercelServerless(
+    {
+      imageService: true,
+      devImageService: 'squoosh',
     }
-  }), markdoc()]
+  ),
 });
