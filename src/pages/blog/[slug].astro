@@ -41,7 +41,7 @@ const ogImageAbsoluteUrl =
 console.log("THIS IS THE SLUG!!!: " + "content/blog/" + slug + ".mdoc");
 ---
 
-<ContentLayout title={frontmatter.title} date={frontmatter.date} url={"/blog/" + slug + ".mdoc"}>
+<ContentLayout title={frontmatter.title} date={frontmatter.date} url={"/blog/" + slug}>
   <BlogPostMeta
     title={frontmatter.title}
     description={frontmatter.external ? undefined : frontmatter.description}
