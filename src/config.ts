@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Nima's Blog";
 export const SITE_DESCRIPTION =
-  "Welcome to my blog! I write my journey in Interactive & Multimedia Learning.";
+  "Welcome to my blog! I write my journey in Interactive & Multimedia Learning. I am a computer science student at UVIC and I like to play volleyball!";
 export const TWITTER_HANDLE = "@OhNoNima";
 export const MY_NAME = "Nima Mohajeri";
 
