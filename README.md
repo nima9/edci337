@@ -10,7 +10,7 @@ I will be adding a plugin for a commenting system.
 
 In other projects in the future, for practice and learning, I would not start with a template and make the site from the ground up.
 
--Nima
+-Nima Mohajeri
 
 <details><summary>Commit Message</summary>
 Commit types include:
