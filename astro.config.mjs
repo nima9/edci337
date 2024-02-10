@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 // import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import vercelStatic from "@astrojs/vercel/static";
+import markdoc from "@astrojs/markdoc";
 
 
 /* 
@@ -14,7 +15,7 @@ import vercelStatic from "@astrojs/vercel/static";
   If you don't know your website URL yet, don't worry about this
   and leave it empty or use localhost URL. It won't break anything.
 */
-import markdoc from "@astrojs/markdoc";
+
 const SERVER_PORT = 3000;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
@@ -42,7 +43,7 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    markdoc(),
+    markdoc({ allowHTML: true }),
   ],
   output: 'static',
   adapter: vercelStatic(),
