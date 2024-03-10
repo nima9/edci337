@@ -26,24 +26,24 @@ const isBuild = SCRIPT.includes("astro build");
 let BASE_URL = LOCALHOST_URL;
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {
-  BASE_URL = LIVE_URL;
+	BASE_URL = LIVE_URL;
 }
 
 // https://astro.build/config
 export default defineConfig({
-  server: {
-    port: SERVER_PORT,
-  },
-  site: BASE_URL,
-  integrations: [
-    // sitemap(), // for SEO sitemap, don't need rn.
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    markdoc({ allowHTML: true }, { ignoreIndentation: true }),
-  ],
-  output: "static",
-  adapter: vercelStatic(),
+	server: {
+		port: SERVER_PORT,
+	},
+	site: BASE_URL,
+	integrations: [
+		// sitemap(), // for SEO sitemap, don't need rn.
+		tailwind({
+			config: {
+				applyBaseStyles: false,
+			},
+		}),
+		markdoc({ allowHTML: true }, { ignoreIndentation: true }),
+	],
+	output: "static",
+	adapter: vercelStatic(),
 });
