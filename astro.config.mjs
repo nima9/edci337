@@ -14,7 +14,7 @@ import markdoc from "@astrojs/markdoc";
   If you don't know your website URL yet, don't worry about this
   and leave it empty or use localhost URL. It won't break anything.
 */
-
+import svelte from "@astrojs/svelte";
 const SERVER_PORT = 3000;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
@@ -36,13 +36,21 @@ export default defineConfig({
 	},
 	site: BASE_URL,
 	integrations: [
+		svelte(),
 		// sitemap(), // for SEO sitemap, don't need rn.
 		tailwind({
 			config: {
 				applyBaseStyles: false,
 			},
 		}),
-		markdoc({ allowHTML: true }, { ignoreIndentation: true }),
+		markdoc(
+			{
+				allowHTML: true,
+			},
+			{
+				ignoreIndentation: true,
+			},
+		),
 	],
 	output: "static",
 	adapter: vercelStatic(),

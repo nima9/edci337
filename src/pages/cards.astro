@@ -1,17 +1,16 @@
 ---
 import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import Intro from "../components/Intro.astro";
-import AboutTheTheme from "../components/AboutTheTheme.astro";
+
 import { SITE_TITLE } from "../config";
 import Footer from "../components/Footer.astro";
+import MyCards from "src/components/Flashcards/App.svelte";
 ---
 
 <PageLayout>
-	<PageMeta title={`${SITE_TITLE} for EDCI 337`} slot="meta" />
+	<PageMeta title={`Flashcards | ${SITE_TITLE}`} slot="meta" />
 	<Fragment slot="main">
-		<Intro />
-		<!-- <AboutTheTheme /> -->
+		<MyCards client:load />
 	</Fragment>
 </PageLayout>
 <Footer />
