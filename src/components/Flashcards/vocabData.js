@@ -15,9 +15,9 @@ export const vocab = [
 	},
 	{
 		eng: "Bathroom",
-		romanji: "Basu ru-mu",
-		actualUse: "バスルーム",
-		furigana: "ばするーむ",
+		romanji: "O furo",
+		actualUse: "お風呂",
+		furigana: "おふろ",
 		image: "/images/flashcards/bathroom.jpg",
 	},
 	{
