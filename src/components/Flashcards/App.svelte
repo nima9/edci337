@@ -41,14 +41,22 @@
 	</div>
 
 	<!-- BUTTONS -->
-	<div id="btn-cont">
-		<button class="arrow-btn" on:click={prevCard}>&#8592;</button>
-
-		<button on:click={toggleShowBack}>
+	<div>
+		<button
+			class="bg-amber-600 px-2 py-2 text-white cursor-pointer active:bg-yellow-900"
+			on:click={prevCard}>&#8592;</button
+		>
+		<button
+			class="bg-amber-600 px-2 py-2 text-white cursor-pointer active:bg-yellow-900"
+			on:click={toggleShowBack}
+		>
 			{showCardBack ? "Hide Answer" : "Show Answer"}
 		</button>
 
-		<button class="arrow-btn" on:click={nextCard}>&#8594;</button>
+		<button
+			class="bg-amber-600 px-2 py-2 text-white cursor-pointer active:bg-yellow-900"
+			on:click={nextCard}>&#8594;</button
+		>
 	</div>
 </main>
 
@@ -83,23 +91,5 @@
 	/* Do an horizontal flip on button click */
 	.flip-it {
 		transform: rotateY(180deg);
-	}
-
-	#btn-cont {
-		width: 200px;
-		padding: 10px 0;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	button {
-		background-color: hsl(65, 6%, 40%);
-		padding: 10px 10px;
-		color: white;
-		cursor: pointer;
-	}
-
-	button:active {
-		background-color: hsl(50, 65%, 25%);
 	}
 </style>
