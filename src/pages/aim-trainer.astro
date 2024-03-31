@@ -1,0 +1,14 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+import { SITE_TITLE } from "../config";
+import MyAimTrainer from "src/components/AimTrainer/App.svelte";
+---
+
+<PageLayout>
+	<PageMeta title={`AimTrainer | ${SITE_TITLE}`} slot="meta" />
+	<Fragment slot="main">
+		<MyAimTrainer client:load />
+	</Fragment>
+</PageLayout>
