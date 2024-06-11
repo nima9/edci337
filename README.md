@@ -1,3 +1,7 @@
+# Took down vercel site
+
+
+
 # EDCI 337 Site
 
 This is a template for blogs called ["Blogster"](https://github.com/flexdinesh/blogster) with using the theme: **bubblegum**.
